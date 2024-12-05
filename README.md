@@ -19,7 +19,7 @@ use insomnia to make requests as shown in video.
 
 ## Usage Video
 
-
+https://drive.google.com/file/d/1QFLXckUPnjxtVOHeagug-X1X1smzW47i/view?usp=sharing
 
 ## Contributing
 
