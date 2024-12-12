@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteThought = exports.updateThought = exports.createThought = exports.getThoughts = void 0;
 const Thought_1 = __importDefault(require("../models/Thought"));
+// Controller function for getting thoughts
 const getThoughts = (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const thoughts = yield Thought_1.default.find();
@@ -29,6 +30,7 @@ const getThoughts = (_req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
 });
 exports.getThoughts = getThoughts;
+// Controller function for creating a thought
 const createThought = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const newThought = yield Thought_1.default.create(req.body);
@@ -44,6 +46,7 @@ const createThought = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     }
 });
 exports.createThought = createThought;
+// Controller function for updating a thought
 const updateThought = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const updatedThought = yield Thought_1.default.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -59,6 +62,7 @@ const updateThought = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     }
 });
 exports.updateThought = updateThought;
+// Controller function for deleting a thought
 const deleteThought = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield Thought_1.default.findByIdAndDelete(req.params.id);
